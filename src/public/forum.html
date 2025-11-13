@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fórum AutKids</title>
+  <link rel="stylesheet" href="./css/styleForum.css">
+</head>
+<body>
+  <header>
+    <h1 class="page-title">AutKids - Fórum</h1>
+    <button class="logout-btn" onclick="logout()">Sair</button>
+  </header>
+
+  <div class="container">
+    <h2 id="boasVindas"></h2>
+    
+    <div class="question-area">
+      <textarea id="perguntaInput" placeholder="Escreva sua pergunta..."></textarea>
+      
+      <!-- ÁREA DE ANEXOS -->
+      <div class="anexo-area">
+        <input type="file" id="anexoPergunta" accept="image/*,.pdf,.doc,.docx" style="display: none;">
+        <button type="button" onclick="document.getElementById('anexoPergunta').click()" class="btn-anexo">
+          📎 Anexar Arquivo
+        </button>
+        <div id="previewAnexo" class="preview-anexo"></div>
+      </div>
+      
+      <button onclick="enviarPergunta()">Enviar Pergunta</button>
+    </div>
+
+    <div id="listaPerguntas"></div>
+  </div>
+
+  <script src="./js/scriptForum.js"></script>
+</body>
+</html>

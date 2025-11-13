@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AutKids - Login / Cadastro</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <main class="container">
+    <div class="card">
+      <div class="switch-panel">
+          <div class="logo">AutKids</div>
+          <div class="text">
+              <h2>Bem-vindo de volta!</h2>
+              <p>Entre na sua conta para continuar sua jornada conosco.</p>
+              <button class="btn ghost" id="show-login">Fazer Login</button>
+          </div>
+          
+          <div class="text">
+              <h2>Novo por aqui?</h2>
+              <p>Cadastre-se para fazer parte da nossa comunidade especial.</p>
+              <button class="btn ghost" id="show-register">Criar Conta</button>
+          </div>
+      </div>
+
+      <div class="forms">
+        <!-- Login -->
+        <form id="login-form" class="form active" novalidate>
+          <h3>Fazer Login</h3>
+          <div class="input-group">
+            <label for="login-email">E-mail</label>
+            <input id="login-email" type="email" required placeholder="seu@email.com" />
+          </div>
+          <div class="input-group">
+            <label for="login-pass">Senha</label>
+            <input id="login-pass" type="password" required placeholder="Sua senha (mínimo 6 caracteres)" />
+          </div>
+          <button type="submit" class="btn primary">Entrar</button>
+        </form>
+
+        <!-- Register -->
+        <form id="register-form" class="form" novalidate>
+          <h3>Criar Conta</h3>
+          <div class="input-group">
+            <label for="reg-name">Nome Completo</label>
+            <input id="reg-name" type="text" required placeholder="Seu nome completo" />
+          </div>
+          <div class="input-group">
+            <label for="reg-email">E-mail</label>
+            <input id="reg-email" type="email" required placeholder="seu@email.com" />
+          </div>
+          <div class="input-group">
+            <label for="reg-pass">Senha</label>
+            <input id="reg-pass" type="password" required placeholder="Crie uma senha segura (mínimo 6 caracteres)" />
+          </div>
+
+          <!-- CHECKBOX CORRIGIDO -->
+          <div class="input-group checkbox">
+            <input type="checkbox" id="is-professional" />
+            <label for="is-professional">Sou profissional da área</label>
+          </div>
+
+          <div id="prof-fields" style="display:none;">
+            <div class="input-group">
+              <label for="reg-doc">Documento profissional</label>
+              <input id="reg-doc" type="text" placeholder="Número do registro (CRP, CREFITO, etc.)" />
+            </div>
+            <div class="input-group">
+              <label for="reg-area">Especialidade</label>
+              <input id="reg-area" type="text" placeholder="Sua especialidade profissional" />
+            </div>
+          </div>
+
+          <button type="submit" class="btn primary">Cadastrar</button>
+          <!-- BOTÃO DE MUDAR SENHA REMOVIDO -->
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>
